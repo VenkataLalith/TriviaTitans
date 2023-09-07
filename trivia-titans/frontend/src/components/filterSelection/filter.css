@@ -1,0 +1,36 @@
+.filter-section-container {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 0 20px 20px 20px;
+	margin-bottom: 20px;
+	background-color: #f8f8f8;
+}
+
+.filter-section h1 {
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: #007bff;
+}
+.filter-section-title {
+	font-weight: bolder;
+}
+.filter-section input[type='radio'] {
+	display: none;
+}
+
+.filter-section label {
+	display: inline-block;
+	margin: 5px;
+	padding: 10px 20px;
+	border: 2px solid #007bff;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #007bff;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-section input[type='radio']:checked + label {
+	background-color: #007bff;
+	color: #fff;
+}

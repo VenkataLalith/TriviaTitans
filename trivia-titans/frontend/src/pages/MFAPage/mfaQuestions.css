@@ -1,0 +1,46 @@
+.security-questions-form {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.security-questions-form label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.security-questions-form input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.security-questions-form button {
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.security-questions-form button:hover {
+	background-color: #0056b3;
+}
+
+.security-questions-form button:active {
+	background-color: #003d80;
+}
+
+.security-questions-form button:focus {
+	outline: none;
+}

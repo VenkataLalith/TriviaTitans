@@ -1,0 +1,65 @@
+.landing_page_title {
+	font-size: 80px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 400px;
+	color: #333;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login_and_registration_btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login_btn,
+.google_login_btn {
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+.login_btn {
+	width: 220px; /* Adjust the width as desired */
+}
+
+.google_login_btn {
+	width: 200px; /* Adjust the width as desired */
+}
+
+.login_btn:hover,
+.google_login_btn:hover {
+	background-color: #0056b3;
+}
+
+.login_btn:active,
+.google_login_btn:active {
+	background-color: #003d80;
+}
+
+.login_btn:focus,
+.google_login_btn:focus {
+	outline: none;
+}
+
+.button_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+@media (min-width: 768px) {
+	.button_container {
+		flex-wrap: nowrap;
+	}
+}

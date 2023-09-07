@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	margin: 0;
+	overflow: hidden;
+	height: 100% !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #eee;
+}
+
+.card,
+.card1,
+.card2,
+.card3 {
+	width: 350px;
+	background-color: #fff;
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 0 10%;
+	margin-top: 20px;
+}
+
+.card2,
+.card3 {
+	width: 435px;
+	height: auto;
+	margin-left: 0;
+}
+
+.card .info,
+.card1 .info,
+.card2 .info,
+.card3 .info {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #e1dede;
+	background-color: #e5e5e5;
+}
+
+.card .info button,
+.card1 .info button,
+.card2 .info button,
+.card3 .info button {
+	height: 30px;
+	width: 80px;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #000;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.card .forms,
+.card1 .forms,
+.card2 .forms,
+.card3 .forms {
+	padding: 15px;
+}
+
+.card .inputs,
+.card1 .inputs,
+.card2 .inputs,
+.card3 .inputs {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.card .inputs span,
+.card1 .inputs span,
+.card2 .inputs span,
+.card3 .inputs span {
+	font-size: 12px;
+}
+
+.card .inputs input,
+.card1 .inputs input,
+.card2 .inputs input,
+.card3 .inputs input {
+	height: 40px;
+	padding: 0px 10px;
+	font-size: 17px;
+	box-shadow: none;
+	outline: none;
+}
+
+.card .inputs input[readonly],
+.card1 .inputs input[readonly],
+.card2 .inputs input[readonly],
+.card3 .inputs input[readonly] {
+	background-color: rgb(252, 252, 252);
+}
+
+.card .inputs input,
+.card1 .inputs input,
+.card2 .inputs input,
+.card3 .inputs input {
+	background-color: rgb(155, 119, 119);
+}
+
+.userList {
+	padding: 15px 20px 26px 28px;
+}
+
+.userName {
+	padding: 13px 286px 6px 0px;
+}
+
+.timeStampData {
+	margin-left: 191px;
+}

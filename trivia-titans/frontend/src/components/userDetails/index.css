@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #f0f0f0;
+}
+
+.card {
+	width: 350px;
+	background-color: #fff;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 0 10px;
+}
+
+.card .info {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #e1dede;
+	background-color: #f5f5f5;
+}
+
+.card .info button {
+	height: 30px;
+	width: 80px;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #000;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+}
+
+.card .info button:hover {
+	background-color: #333;
+}
+
+.card .forms {
+	padding: 15px;
+}
+
+.card .inputs {
+	margin-bottom: 15px;
+}
+
+.card .inputs span {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #555;
+}
+
+.card .inputs input {
+	height: 40px;
+	padding: 0px 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 100%;
+	transition: border-color 0.3s;
+}
+
+.card .inputs input[readonly] {
+	background-color: #f8f8f8;
+	border-color: #f8f8f8;
+}
+
+.card .inputs input:focus {
+	border-color: #888;
+}

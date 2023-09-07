@@ -1,0 +1,373 @@
+# # AWSTemplateFormatVersion: '2010-09-09'
+# # Resources:
+# #   MyDynamoDBTable:
+# #     Type: 'AWS::DynamoDB::Table'
+# #     Properties:
+# #       TableName: testCloudFormation  # Replace with your desired table name
+# #       AttributeDefinitions:
+# #         - AttributeName: numbers      # Replace 'PK' with your partition key attribute name
+# #           AttributeType: N      # Replace 'S' with the data type of the partition key (e.g., S for string, N for number, etc.)
+# #         # Add more attributes as needed for your table's schema
+# #         # - AttributeName: SK
+# #         #   AttributeType: S
+# #       KeySchema:
+# #         - AttributeName: numbers
+# #           KeyType: HASH
+# #         # Add more key attributes if you are using a composite key (HASH + RANGE)
+# #         # - AttributeName: SK
+# #         #   KeyType: RANGE
+# #       ProvisionedThroughput:
+# #         ReadCapacityUnits: 5   # Adjust the read capacity units as needed
+# #         WriteCapacityUnits: 5  # Adjust the write capacity units as needed
+
+# AWSTemplateFormatVersion: '2010-09-09'
+# Resources:
+#   Table1:
+#     Type: 'AWS::DynamoDB::Table'
+#     Properties:
+#       TableName: testtable1  # Replace with your desired table name
+#       AttributeDefinitions:
+#         - AttributeName: test1
+#           AttributeType: S
+#         # Add more attributes as needed for your table's schema
+#         # - AttributeName: SK1
+#         #   AttributeType: S
+#       KeySchema:
+#         - AttributeName: test1
+#           KeyType: HASH
+#         # Add more key attributes if you are using a composite key (HASH + RANGE)
+#         # - AttributeName: SK1
+#         #   KeyType: RANGE
+#       BillingMode: PAY_PER_REQUEST
+
+#   Table2:
+#     Type: 'AWS::DynamoDB::Table'
+#     Properties:
+#       TableName: test2  # Replace with your desired table name
+#       AttributeDefinitions:
+#         - AttributeName: numbers
+#           AttributeType: N
+#         # Add more attributes as needed for your table's schema
+#         # - AttributeName: SK2
+#         #   AttributeType: S
+#       KeySchema:
+#         - AttributeName: numbers
+#           KeyType: HASH
+#         # Add more key attributes if you are using a composite key (HASH + RANGE)
+#         # - AttributeName: SK2
+#         #   KeyType: RANGE
+#       BillingMode: PAY_PER_REQUEST
+
+#   Table3:
+#     Type: 'AWS::DynamoDB::Table'
+#     Properties:
+#       TableName: test3  # Replace with your desired table name
+#       AttributeDefinitions:
+#         - AttributeName: connectionID
+#           AttributeType: S
+#         # Add more attributes as needed for your table's schema
+#         # - AttributeName: SK3
+#         #   AttributeType: S
+#       KeySchema:
+#         - AttributeName: connectionID
+#           KeyType: HASH
+#         # Add more key attributes if you are using a composite key (HASH + RANGE)
+#         # - AttributeName: SK3
+#         #   KeyType: RANGE
+#       BillingMode: PAY_PER_REQUEST
+
+#   LambdaFunction1:
+#     Type: 'AWS::Lambda::Function'
+#     Properties:
+#       FunctionName: MyLambdaFunction1  # Replace with your desired function name
+#       Runtime: nodejs18.x  # Node.js 14.x runtime
+#       Handler: index.handler     # Replace 'index' with your Node.js file name and 'handler' with your exported function name
+#       Code:
+#         ZipFile: |
+#           export const handler = async (event) => {
+#             // TODO implement
+#             const response = {
+#               statusCode: 200,
+#               body: JSON.stringify('Hello from Lambda!'),
+#             };
+#             return response;
+#           };
+#       Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"  # Replace with the ARN of your existing role
+
+#   LambdaFunction2:
+#     Type: 'AWS::Lambda::Function'
+#     Properties:
+#       FunctionName: MyLambdaFunction2  # Replace with your desired function name
+#       Handler: index.handler
+#       Runtime: nodejs18.x
+#       Code:
+#         S3Bucket: lambdawebsocketcode
+#         S3Key: MyLambdaFunction.zip
+#       Timeout: 3000
+#       Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"  # Replace with the ARN of your existing role
+
+#   LambdaFunction3:
+#     Type: 'AWS::Lambda::Function'
+#     Properties:
+#       FunctionName: MyLambdaFunction3  # Replace with your desired function name
+#       Runtime: nodejs18.x  # Node.js 14.x runtime
+#       Handler: index.handler     # Replace 'index' with your Node.js file name and 'handler' with your exported function name
+#       Code:
+#         ZipFile: |
+#           export const handler = async (event) => {
+#             // TODO implement
+#             const response = {
+#               statusCode: 200,
+#               body: JSON.stringify('Hello from Lambda!'),
+#             };
+#             return response;
+#           };
+#       Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"  # Replace with the ARN of your existing role
+
+#working lambda
+# AWSTemplateFormatVersion: 2010-09-09
+# Description: Lambda function with Node.js 18 runtime
+# Resources:
+#   LambdaFunction:
+#     Type: AWS::Lambda::Function
+#     Properties:
+#       FunctionName: MyLambdaFunctionkova
+#       Handler: index.handler
+#       Runtime: nodejs18.x
+#       Code:
+#         S3Bucket: lambdawebsocketcode
+#         S3Key: MyLambdaFunction.zip
+#       Timeout: 300
+#       Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+
+
+###
+
+# AWSTemplateFormatVersion: '2010-09-09'
+# Description: CloudFormation template for creating an API Gateway with WebSocket and Lambda integrations.
+
+# Resources:
+#   LambdaFunction:
+#     Type: AWS::Lambda::Function
+#     Properties:
+#       FunctionName: MyLambdaFunctionkova
+#       Handler: index.handler
+#       Runtime: nodejs18.x
+#       Code:
+#         S3Bucket: lambdawebsocketcode
+#         S3Key: MyLambdaFunction.zip
+#       Timeout: 300
+#       Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+
+#   WebSocketAPI:
+#     Type: AWS::ApiGatewayV2::Api
+#     Properties:
+#       Name: testMyWebSocketAPI
+#       ProtocolType: WEBSOCKET
+#       RouteSelectionExpression: $request.body.action
+
+#   WebSocketRoute1:
+#     Type: AWS::ApiGatewayV2::Route
+#     Properties:
+#       ApiId: !Ref WebSocketAPI
+#       RouteKey: $connect
+
+#   WebSocketRoute2:
+#     Type: AWS::ApiGatewayV2::Route
+#     Properties:
+#       ApiId: !Ref WebSocketAPI
+#       RouteKey: $disconnect
+
+#   WebSocketRoute3:
+#     Type: AWS::ApiGatewayV2::Route
+#     Properties:
+#       ApiId: !Ref WebSocketAPI
+#       RouteKey: getclientrequest
+#       AuthorizationType: NONE
+#       OperationName: getclientrequest
+#       Target: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:connectlambdafunction
+
+#   WebSocketIntegration:
+#     Type: AWS::ApiGatewayV2::Integration
+#     Properties:
+#       ApiId: !Ref WebSocketAPI
+#       IntegrationType: AWS_PROXY
+#       IntegrationUri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:connectlambdafunction/invocations
+#       PayloadFormatVersion: '2.0'
+
+#   WebSocketDeployment:
+#     Type: AWS::ApiGatewayV2::Deployment
+#     Properties:
+#       ApiId: !Ref WebSocketAPI
+
+#   Stage:
+#     Type: AWS::ApiGatewayV2::Stage
+#     Properties:
+#       StageName: Prod
+#       Description: Production Stage
+#       AutoDeploy: true
+#       ApiId: !Ref WebSocketAPI
+#       DeploymentId: !Ref WebSocketDeployment
+
+
+# 
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  simple-websockets-chat-app
+
+  SAM Template for simple-websockets-chat-app that has the DynamoDB table and Lambda
+  functions needed to demonstrate the Websocket protocol on API Gateway.
+
+Parameters:
+  TableName:
+    Type: String
+    Default: 'simplechat_connections'
+    Description: (Required) The name of the new DynamoDB to store connection identifiers for each connected clients. Minimum 3 characters
+    MinLength: 3
+    MaxLength: 50
+    AllowedPattern: ^[A-Za-z_]+$
+    ConstraintDescription: 'Required. Can be characters and underscore only. No numbers or special characters allowed.'
+
+Resources:
+
+  SimpleChatWebSocket:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: SimpleChatWebSocket
+      ProtocolType: WEBSOCKET
+      RouteSelectionExpression: "$request.body.action"
+  ConnectRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      RouteKey: $connect
+      AuthorizationType: NONE
+      OperationName: ConnectRoute
+      Target: !Join
+        - '/'
+        - - 'integrations'
+          - !Ref ConnectInteg
+  ConnectInteg:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      Description: Connect Integration
+      IntegrationType: AWS_PROXY
+      IntegrationUri: 
+        Fn::Sub:
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:TestOnConnectFunction/invocations
+  GetRequestRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      RouteKey: getrequest
+      AuthorizationType: NONE
+      OperationName: GetRequest
+      Target: !Join
+        - '/'
+        - - 'integrations'
+          - !Ref GetRequestInteg
+  GetRequestInteg:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      Description: Connect Integration
+      IntegrationType: AWS_PROXY
+      IntegrationUri: 
+        Fn::Sub:
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:TestGetRequestFunction/invocations
+  GetResponseRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      RouteKey: getresponse
+      AuthorizationType: NONE
+      OperationName: GetResponse
+      Target: !Join
+        - '/'
+        - - 'integrations'
+          - !Ref GetResponseInteg
+  GetResponseInteg:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+      Description: Connect Integration
+      IntegrationType: AWS_PROXY
+      IntegrationUri: 
+        Fn::Sub:
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:GetResponseFunction/invocations
+  Deployment:
+    Type: AWS::ApiGatewayV2::Deployment
+    DependsOn:
+    - ConnectRoute
+    - GetRequestRoute
+    - GetResponseRoute
+    Properties:
+      ApiId: !Ref SimpleChatWebSocket
+  Stage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      StageName: Prod
+      Description: Prod Stage
+      DeploymentId: !Ref Deployment
+      ApiId: !Ref SimpleChatWebSocket
+  OnConnectFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: TestOnConnectFunction
+      Handler: index.handler
+      Runtime: nodejs18.x
+      Code:
+        S3Bucket: lambdawebsocketcode
+        S3Key: MyLambdaFunction.zip
+      Timeout: 300
+      Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+  OnConnectPermission:
+    Type: AWS::Lambda::Permission
+    DependsOn:
+      - SimpleChatWebSocket
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:  !Ref OnConnectFunction
+      Principal: apigateway.amazonaws.com
+  GetRequestFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: TestGetRequestFunction
+      Handler: index.handler
+      Runtime: nodejs18.x
+      Code:
+        S3Bucket: lambdawebsocketcode
+        S3Key: MyLambdaFunction.zip
+      Timeout: 300
+      Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+  GetRequestPermission:
+    Type: AWS::Lambda::Permission
+    DependsOn:
+      - SimpleChatWebSocket
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:  !Ref GetRequestFunction
+      Principal: apigateway.amazonaws.com
+  GetResponseFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: TestGetResponseFunction
+      Handler: index.handler
+      Runtime: nodejs18.x
+      Code:
+        S3Bucket: lambdawebsocketcode
+        S3Key: MyLambdaFunction.zip
+      Timeout: 300
+      Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+  GetResponsePermission:
+    Type: AWS::Lambda::Permission
+    DependsOn:
+      - SimpleChatWebSocket
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:  !Ref GetResponseFunction
+      Principal: apigateway.amazonaws.com
+
+

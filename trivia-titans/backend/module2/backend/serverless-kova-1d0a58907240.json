@@ -1,0 +1,15 @@
+
+
+{
+  "type": "service_account",
+  "project_id": "trivia-titans-392121",
+  "private_key_id": "ab2b0060789fbc5bcf7fdb2eb01ea497c091a052",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQClGsaObJTamc1d\nrZw6WALStg8K+c9goXpBT7DD6BhT0AXCrCPFrIQlRxgSwNIOGcUFu6HsvjaTd/va\nghkrRpLHCcjdztREY7863sYFQqQRA3xgyY4wYFH7eiCzIOHRpzKFl+wthxHDiQbG\njVZemMmTuLx/FwGq2KKlEC0ybv9QlSWsm8O8niLKT6V19FBi3BJ6kFax54qE6WJe\nHNZYbrGflPzQBBhDLGZAgkX+9cZDfPXBGtGnr9X7ceQmKZfMtp9txYrdxOPVErKZ\ntHGE6G45I+tiFUWQqoYPQYAuRuiuMRwnD0EuMn5D0Inw4tI7o80svazjY9wrhvjp\n04LsoWfDAgMBAAECggEALzCBetivDPHzwCgsZIKeP/J4RzdSXfiZVEx+JehS97WX\nx+XijY+671qsF0QUZaJY7UQNSnitaaXcDr6rifJwZkI2Lqt8gRWPZTiiGYPMF+7K\noHFLWilVlU55RSmLUZx7tLJQ90xJN/2UubBQ9NWvm7Cr85k0SUwE5K/Ec0tFXxbk\neVlFS5PNinNVJs5MeX2P0tADMLJWFBP7pedJ2qRzSgtxUQuocMDCgxWNCXmREDfh\npajRC0PZ8yfHxP6E9bxpSpkbUeDTmx0up9a1i60FoLvWd501Y65XC76ClABcU9KR\n2WFJ7cyxg1gxnXs6NPROk3bLKoDg9OsVgVwvJn56DQKBgQDN7Tsfoxoi7/J6MQ5r\nesj4C/FfhgSlsYnuvy/jp/I5VHbBLwX0vGh8Ug3J2OHxUuqa9gCMar8a4OGVwBlW\nVOcAOfxygiPqVsMM2tc+DfIrm+pIza9C+ZkB5hCGstHSJoMjWbo9ByYuCE+/XqjH\nXFBrMcryOjGIQ6wcU+TIEQSPjwKBgQDNQGcP/NPfn4evYmYGCayLDGSYMObTfZCd\nbBz7vN77M3wo941HRDEE6zHSygewNM3VoVLa6nnom3rJ8yYhTna9RqdqFfCQQnzO\nRjOar1Yu9vEBwY0eH5jHzb0xEmbA/KRAnzRnKRwwol0S2IRvaqpiofAd9ABVx+M/\nTwbIivFKjQKBgQCoF5XDZWfYTPUpORIEOd4CW/1TdBonBp0I/Zchxd27Xm7xkmjS\nNVk04eXPdfI5Au3uQBCCjkAguKBrlLsZ9YP6c1rWPdUDXH8q5xf713Zukn7TntIJ\nYaS8IAgta5pKaJVzLbMQTd2khbRTCfnLgldCqQp4X3g/Or4rAXAmv31xkQKBgQCh\nhlhVHZvDdXE7VY2CnORbfQJBPuK4dy1ypZ1dgvJb79V7C+3zsrd87naEMxe/1J5T\ny6Q/wZz0sD7+ZMqSFYSeSdcARonNjXVYg6iix+9kAFQEFMSwex8pxkBoONoCcA/3\nBxMfSBv2LiBe72Oxpti1zEkB2X7WAvtUXCWzdpyTFQJ/YAADcASdE9nNfc/6xfSS\nlK3xhUFgnhe886LJs7Ai1WjnC2joKOfDqy57cHl5VJpNubX2zeLPQLwjg+cAZPxk\nKkkmWh1g6OS9PljCAXkEVWN9WFuSXBNeVc22RXqgPqB0d7GuFY0r94EE1n3X71HZ\n7EWXEHZPjizOOO/SUvLgaw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firestoreiam@trivia-titans-392121.iam.gserviceaccount.com",
+  "client_id": "116693333220839246857",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firestoreiam%40trivia-titans-392121.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,73 @@
+.container-quiz-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 50px;
+}
+.join-quiz-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.invite-member-button,
+.join-quiz-button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+}
+
+.invite-member-button {
+	background-color: #4caf50;
+	margin-bottom: 10px;
+}
+
+.join-quiz-button {
+	background-color: green;
+}
+
+.team-member-name-div {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 25px;
+	background-color: #f9f9f9;
+	width: 80vw;
+}
+.team-member-details {
+	/* Update styles for the team member details section */
+	margin: 20px 0;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 8px;
+	display: flex; /* Add Flexbox */
+	flex-direction: column; /* Stack items vertically */
+	align-items: center; /* Center items horizontally */
+	justify-content: center; /* Center items vertically */
+}
+
+.team-member-details p {
+	margin: 10px;
+	padding: 5px 0;
+}
+
+.team-member-details button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.team-member-details button:hover {
+	background-color: #0056b3;
+}

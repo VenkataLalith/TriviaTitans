@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "serverless-kova",
+  "private_key_id": "1d0a58907240ae93c767b852c4581fb74eec505a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDemLWnPyUhd7eP\nOTyETiKGo6S8SmbrNwhDBwhMdCHRLuggSVPtZNvRCytnbL8W+S/nXHfiJiZA2P8c\ntaAkLElj3hD6dONiXdnJ94fWjD2wgYCYeIal5cWQF5xFBEput1MoeODpKy4E2s1r\nlkXqmpOw8atT3NAnfh2dvrnxzC7EhVT72Al/dTG0/mHMDcwNfILU4VSpAOWir5h/\nmGBDqLtqIR+B1A74wYjakW0Uv3KJ5XSsTO2GRg0lLpVCNUH73z4n47nGMUZt8Hv+\nGDOb9rW3HM9xQsYeCCWWV7XNhJRXBRWCyArAuDHkDmL/xUYNi7LkVLEy0HPEGUuq\nqnxAXtkbAgMBAAECggEAQX+F1BSMhHCJnqck23lyR1PXoV/zMLscvzxOgNCbMsYu\nn3F0NKI83CIBP4mMIOJp6hYXYIABOYugZX48BOjTH4O0Uz4ZulQLRZaEbekOLeWt\nRTARzrbxjxijbtt4W2OuIHaRF4sRG3SWhVXOdN3PH329AAw1Y6mEZWo9pJyEFmbo\nwn4McIVIX/joWFsrCwuhTilJcXNnNDIemrccNyjfJbGbPp9BRnFrWNodqdvdcIBU\nXK01elMfYW4QaFBy3A2OdCGw54fJs9y9iGYByQB1FDUHijCiBk+DbTptaRHXMeeX\nBnHkRfcH1JKcNAlRA4oBsOAm1Ewm9/36AAFkn/vKYQKBgQDv2VbQ96HZtPoD44dj\nb9Bn6M52iFf9yyZ5kYHil0qz42kZfSBmrQ+X5yW5zzEIUnXX12N/BS8JY0tC0vXd\nNMZV9aPPmcajdO1lUlpDBqgEaYev1nUyF2JZr7zDK9y2FksTPuOXf6sjphs5y1sH\ntVWwdntJbOrdnjui1OJ9naGn5QKBgQDtlfZSn0X6Gc6f183/LlZKDVVolCSs57bA\nIjXVr0X/QvOyVABjxdhBol5/cgjgCveKLgwvKTMitTsS11BzNuwppb4RqhjzbOYu\n3qwECAdnRXuxAXHsSzvWPuM8gGyoMwrsJe5lqYKLWm7FEv6KbU4Z3IpXhKYxkpqs\nNQ1xQzRs/wKBgQDf8oblRtKQfDKVPvVDGzv0SaO9eUDvb6fVCs/Dyo+tt0CC1BpU\nxHIy21iWTabypkvx5OK5zxVEJro3AtMeYBBwYpM5W9Pk+2BNor80phprRD21KQD0\nbHEgXL5bXbEPM3GV3rqS0lnxRz9Uj1PHtsDzqy0iOdhyZTQ5rZxsvaobIQKBgD1s\nCp17ncy1xUxfr1rscNR+M/lwazbkRMPRVFelE5SVi4kr3Fnu+SSmxIVwRskdLLfl\nhbLflN/BOL97OMpAhbeSqNvKPN8Z5TxyxsfYB4n0VbECLaCoJpUR9w9aKD0nzQgW\nGlbgBubd/0slyPaioZFgCcfsfEbOnvwsTwhcFn6jAoGBANaSvJnmEeNGBWWlMOJF\ngPY5tORnDPBRgZCPZpsYcoq6A3Dkaekdvmg3RH79cdNs/z2/DBPwEwaAz3EVzhxX\nZczPD473fdMfxdj22mXFNmTI6CumO0YAmPbUleQp5GkuuZqBKgzxjF1r4XoiiUl4\n9/TdF8LDn6Q+bxQmFMlJ9sG7\n-----END PRIVATE KEY-----\n",
+  "client_email": "serverless-kova@appspot.gserviceaccount.com",
+  "client_id": "104960054882193898434",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/serverless-kova%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

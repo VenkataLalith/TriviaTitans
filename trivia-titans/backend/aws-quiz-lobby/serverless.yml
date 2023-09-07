@@ -1,0 +1,14 @@
+service: quiz-lobby-lambda
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  iam:
+    role: arn:aws:iam::705278811884:role/LabRole
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'

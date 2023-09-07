@@ -1,0 +1,85 @@
+import React, { useState } from 'react';
+import axios, * as others from 'axios'
+const UserDetailsForm = () => {
+  const [userDetails, setUserDetails] = useState({
+    name: '',
+    email: '',
+    age: '',
+  });
+
+  const handleChange = (e) => {
+    setUserDetails({
+      ...userDetails,
+      [e.target.name]: e.target.value,
+    });
+    updateDatabase(userDetails)
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can perform further actions with the user details, such as saving to a database
+    console.log('User details:', userDetails);
+    // Reset the form
+    setUserDetails({
+      name: '',
+      email: '',
+      age: '',
+    });
+    updateDatabase(userDetails)
+
+  };
+
+  function updateDatabase(userDetails){
+    const postData = {
+      userDetails
+    };
+    
+    // Make the POST request
+    axios.post('http://localhost:8080/updateUser', postData)
+      .then(response => {
+        console.log('Response:', response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={userDetails.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={userDetails.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          value={userDetails.age}
+          onChange={handleChange}
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default UserDetailsForm;

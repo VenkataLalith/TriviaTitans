@@ -1,0 +1,61 @@
+service: TriviaAdmin
+
+frameworkVersion: '3'
+
+custom:
+  questionsTableName: 'trivia-questions-table-${self:provider.stage}'
+  gamesTableName: 'trivia-games-table-${self:provider.stage}'
+  wsgi:
+    app: app.app
+
+provider:
+  name: aws
+  runtime: python3.9
+  stage: dev
+  region: us-east-1
+  iam:
+    role: arn:aws:iam::895265653230:role/LabRole
+  environment:
+    QUESTION_TABLE_NAME: ${self:custom.questionsTableName}
+    QUIZ_TABLE_NAME: ${self:custom.gamesTableName}
+
+functions:
+  app:
+    handler: wsgi_handler.handler
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+  - serverless-offline
+
+resources:
+  Resources:
+    TriviaQuestionsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: question_id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: question_id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:custom.questionsTableName}
+
+    TriviaQuizTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: quiz_id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: quiz_id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:custom.gamesTableName}

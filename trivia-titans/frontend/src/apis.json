@@ -1,0 +1,14 @@
+{
+	"USERPOOLID": "us-east-1_9IZTOPOIo",
+	"CLIENTID": "s17hnnmdo6bdj8of89jg12tl2",
+	"aws-lambda-api-authentication": "https://p4hh3rzzii.execute-api.us-east-1.amazonaws.com",
+	"cloud-function-url": "https://us-central1-trivia-c6b5c.cloudfunctions.net/app",
+	"cloud-finction-store-user-url": "https://us-central1-trivia-c6b5c.cloudfunctions.net/storeUser",
+	"quiz-lambda-function-url": "https://b50rchob57.execute-api.us-east-1.amazonaws.com",
+	"aws-fetch-team-member-api": "https://lk6s1p6pz9.execute-api.us-east-1.amazonaws.com/default/fetchTeamList",
+	"aws-sns-topic-new-game-subscription-url": "https://vvfl00tya8.execute-api.us-east-1.amazonaws.com/newgamesubscriber",
+	"aws-sns-topic-game-invite-subscription-url": "https://tr13x5f2si.execute-api.us-east-1.amazonaws.com/gameinvitesubscribe",
+	"aws-send-game-invite-url": "https://tr13x5f2si.execute-api.us-east-1.amazonaws.com/sendgameinvite",
+	"aws-manil-wuestion-end-point": "https://a4r4thtih1.execute-api.us-east-1.amazonaws.com",
+	"lalith-sns-subscribe-api": "https://nl0wiolbx0.execute-api.us-east-1.amazonaws.com/dev/subscribeUser"
+}
